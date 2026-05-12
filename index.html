@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carlos Rodríguez - AI & Software Engineer. Building intelligent solutions with Machine Learning, Data Engineering & Cloud.">
+    <title>Carlos Rodríguez | AI & Software Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background">
+        <canvas id="canvas-bg"></canvas>
+        <div class="wave-container">
+            <svg class="wave" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,50 Q300,0 600,50 T1200,50 L1200,120 L0,120 Z" fill="rgba(10, 102, 255, 0.1)"></path>
+            </svg>
+            <svg class="wave" viewBox="0 0 1200 120" preserveAspectRatio="none" style="animation-delay: -2s;">
+                <path d="M0,50 Q300,0 600,50 T1200,50 L1200,120 L0,120 Z" fill="rgba(0, 212, 255, 0.05)"></path>
+            </svg>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <div class="nav-brand">
+                <img src="logo.png" alt="Carlos Rodríguez Logo" class="logo-img" style="height: 65px; width: auto; display: block;">
+            </div>
+
+            <div class="nav-menu">
+                <a href="#about">Sobre Mí</a>
+                <a href="#stack">Stack</a>
+                <a href="#projects">Proyectos</a>
+                <a href="#contact">Contacto</a>
+            </div>
+
+            <div class="nav-icons">
+                <a href="https://github.com/CarlosRodri99" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/carlos-rodríguez-monzó-50b35320b/" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:carlos.rodriguez.monzo.99@gmail.com" class="btn-contact">Contactar</a>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-left">
+                <h1 class="hero-title">
+                    <span class="line-1">CARLOS</span>
+                    <span class="line-2 gradient-text">RODRÍGUEZ</span>
+                </h1>
+                
+                <p class="hero-subtitle">INGENIERO DE IA Y SOFTWARE</p>
+                
+                <p class="hero-description">
+                    Especialista en IA enfocado en construir soluciones
+                    <span class="highlight">coherentes, transparentes y confiables</span>.
+                </p>
+
+                <div class="hero-tags">
+                    <span class="tag">Inteligencia Artificial</span>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Data Engineering</span>
+                    <span class="tag">Desarrollo Web</span>
+                </div>
+
+                <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                    Iniciar Conversación
+                </button>
+
+                <div class="hero-scroll">
+                    <span>Desplázate para explorar</span>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="neural-brain">
+                    <svg viewBox="0 0 300 300" class="brain-svg">
+                        <defs>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <circle cx="150" cy="150" r="80" fill="none" stroke="url(#brainGrad)" stroke-width="2" opacity="0.5"/>
+                        <circle cx="150" cy="150" r="70" fill="none" stroke="rgba(0, 212, 255, 0.3)" stroke-width="1" opacity="0.3"/>
+                        <circle cx="150" cy="80" r="4" fill="#00D4FF" filter="url(#glow)" class="neural-point"/>
+                        <circle cx="210" cy="110" r="4" fill="#0A66FF" filter="url(#glow)" class="neural-point"/>
+                        <circle cx="230" cy="150" r="4" fill="#6C5CE7" filter="url(#glow)" class="neural-point"/>
+                        <circle cx="210" cy="190" r="4" fill="#00D4FF" filter="url(#glow)" class="neural-point"/>
+                        <circle cx="150" cy="220" r="4" fill="#0A66FF" filter="url(#glow)" class="neural-point"/>
+                        <circle cx="90" cy="190" r="4" fill="#00D4FF" filter="url(#glow)" class="neural-point"/>
+                        <circle cx="70" cy="150" r="4" fill="#6C5CE7" filter="url(#glow)" class="neural-point"/>
+                        <circle cx="90" cy="110" r="4" fill="#00D4FF" filter="url(#glow)" class="neural-point"/>
+                        <circle cx="150" cy="150" r="5" fill="#00D4FF" filter="url(#glow)" class="neural-center"/>
+                        <line x1="150" y1="80" x2="210" y2="110" stroke="rgba(0, 212, 255, 0.4)" stroke-width="1" class="neural-line"/>
+                        <line x1="210" y1="110" x2="230" y2="150" stroke="rgba(10, 102, 255, 0.4)" stroke-width="1" class="neural-line"/>
+                        <line x1="230" y1="150" x2="210" y2="190" stroke="rgba(108, 92, 231, 0.4)" stroke-width="1" class="neural-line"/>
+                        <line x1="210" y1="190" x2="150" y2="220" stroke="rgba(0, 212, 255, 0.4)" stroke-width="1" class="neural-line"/>
+                        <line x1="150" y1="220" x2="90" y2="190" stroke="rgba(10, 102, 255, 0.4)" stroke-width="1" class="neural-line"/>
+                        <line x1="90" y1="190" x2="70" y2="150" stroke="rgba(0, 212, 255, 0.4)" stroke-width="1" class="neural-line"/>
+                        <line x1="70" y1="150" x2="90" y2="110" stroke="rgba(108, 92, 231, 0.4)" stroke-width="1" class="neural-line"/>
+                        <line x1="90" y1="110" x2="150" y2="80" stroke="rgba(0, 212, 255, 0.4)" stroke-width="1" class="neural-line"/>
+                        <linearGradient id="brainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0A66FF;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#00D4FF;stop-opacity:1" />
+                        </linearGradient>
+                    </svg>
+                    <div class="brain-glow"></div>
+                    <div class="brain-border"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stack" class="tech-stack">
+        <div class="container">
+            <h2 class="section-title">MI STACK TECNOLÓGICO</h2>
+            <div class="tech-items">
+                <div class="tech-item"><i class="fab fa-python"></i> <span>Python</span></div>
+                <div class="tech-item"><span class="icon">⚡</span> <span>PyTorch</span></div>
+                <div class="tech-item"><span class="icon">🧠</span> <span>TensorFlow</span></div>
+                <div class="tech-item"><span class="icon">☁️</span> <span>AWS</span></div>
+                <div class="tech-item"><i class="fab fa-docker"></i> <span>Docker</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">PROYECTOS DESTACADOS</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-coins"></i></div>
+                    <h3>Crypto Exchange Pipeline</h3>
+                    <p>Pipeline de procesamiento de datos de criptomonedas con análisis en tiempo real.</p>
+                    <a href="https://github.com/CarlosRodri99/crypto-exchange-pipeline" target="_blank" class="project-arrow">→</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-play"></i></div>
+                    <h3>Netflix Strategic Analysis</h3>
+                    <p>Análisis estratégico del catálogo con insights sobre tendencias de contenido.</p>
+                    <a href="https://github.com/CarlosRodri99/Netflix-strategic-analysis" target="_blank" class="project-arrow">→</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Proyecto Streamlit</h3>
+                    <p>Aplicación interactiva para visualización y análisis de datos en tiempo real.</p>
+                    <a href="https://github.com/CarlosRodri99/proyecto-streamlit" target="_blank" class="project-arrow">→</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Detector de Tumor</h3>
+                    <p>Modelo ML para detección de tumores con redes neuronales y visión por computadora.</p>
+                    <a href="https://github.com/CarlosRodri99/Detector_Tumor" target="_blank" class="project-arrow">→</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-book"></i></div>
+                    <h3>Archivero de Azeroth</h3>
+                    <p>Gestión y consulta de información del universo WoW con base de datos completa.</p>
+                    <a href="https://github.com/CarlosRodri99/ProyectoArchiveroDeAzeroth" target="_blank" class="project-arrow">→</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-flask"></i></div>
+                    <h3>Proyecto Final CSEBDIA</h3>
+                    <p>Proyecto colaborativo de Data Science y BI con análisis avanzado e integración.</p>
+                    <a href="https://github.com/Manel-Sebastian/ProyectoFinal_CSEBDIA" target="_blank" class="project-arrow">→</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container contact-container">
+            <h2 class="section-title">PONTE EN CONTACTO</h2>
+            <p class="contact-subtitle">Hablemos sobre <span class="highlight">tus ideas</span></p>
+            <a href="mailto:carlos.rodriguez.monzo.99@gmail.com" class="btn-primary large">Contactarme</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Carlos Rodríguez - Ingeniero de IA y Software</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
