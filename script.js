@@ -27,7 +27,6 @@ class Particle {
         if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
         if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
 
-        // Bounce on edges
         if (this.x < 0) this.x = 0;
         if (this.x > canvas.width) this.x = canvas.width;
         if (this.y < 0) this.y = 0;
@@ -44,7 +43,6 @@ class Particle {
     }
 }
 
-// Initialize particles
 function initParticles() {
     particles = [];
     for (let i = 0; i < 50; i++) {
@@ -52,7 +50,6 @@ function initParticles() {
     }
 }
 
-// Draw lines between nearby particles
 function drawConnections() {
     ctx.strokeStyle = 'rgba(0, 212, 255, 0.1)';
     ctx.lineWidth = 0.5;
@@ -73,7 +70,6 @@ function drawConnections() {
     }
 }
 
-// Animation loop
 function animateParticles() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -86,7 +82,6 @@ function animateParticles() {
     requestAnimationFrame(animateParticles);
 }
 
-// Handle resize
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
